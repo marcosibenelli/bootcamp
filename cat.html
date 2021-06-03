@@ -1,0 +1,47 @@
+<!DOCTYPE html> <!--Se usa para notificarle al navegador que Version de html estamos usando, ya que el 
+lenguaje evoluciona con el tiempo. HTML es para aclarar que usamos HTML5-->
+<html>
+<!--head y body se usan para organizar mejor el contenido-->
+<head><!--En head por lo general se pone links, meta, tittle y styles-->
+<h2>CatPhotoApp</h2>
+</head>
+<body><!--En body por lo general va todo lo que el usuario puede ver-->
+<main>
+  <p>Click here to view more <a href="#">cat photos</a>.</p>
+
+  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+<div>
+  <p>Things cats love:</p>
+  <ul>
+    <li>cat nip</li>
+    <li>laser pointers</li>
+    <li>lasagna</li>
+  </ul>
+  <p>Top 3 things cats hate:</p>
+  <ol>
+    <li>flea treatment</li>
+    <li>thunder</li>
+    <li>other cats</li>
+  </ol>
+</div><!--Se usa para separar elementos, puede facilitar el css-->
+  <form action="https://www.freecatphotoapp.com/submit-cat-photo">
+    <!--Input viene a ser, en este caso el circulo para poder elegir la opcion que figura en 
+    el label. Dependiendo en que posicion pongo cada uno, el input cambia de lugar-->
+    <label for="indoor"><input id="indoor" value="indoor" type="radio" name="indoor-outdoor" checked> Indoor</label>
+    <!--Agrego el checked al primero de cada input, para que aparezca ya seleccionado por default-->
+    <label for="outdoor"><input id="outdoor" value="outdoor" type="radio" name="indoor-outdoor"> Outdoor</label><br>
+    <!-- Agrego el valor "value" porque sino cuando se envie las respuestas, no se va a enviar
+    los valores correspondientes al output-->
+    <label for="Lovely"><input id="Lovely" type="checkbox" name="personality" checked>Lovely</label>
+    <label for="Angry"><input id="Angry" type="checkbox" name="personality">Angry</label>
+    <label for="Lazy"><input id="Lazy" type="checkbox" name="personality">Lazy</label><br>
+    <!--En este caso input corresponde al cuadro para poder completar con el texto correspondiente, y 
+    placeholder es el texto que aparece previo a completar el cuadro. Required signiface que es obligatorio-->
+    <input type="text" placeholder="cat photo URL" required>
+    <button type="submit">Submit</button>
+    <!-- button, es el boton que aparece para poder enviar los datos-->
+    <!-- todo esto tiene que ir dentro de Form para que se envie toda la informacion-->
+  </form>
+</main>
+</body>
+</html>
