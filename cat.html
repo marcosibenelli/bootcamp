@@ -2,20 +2,42 @@
 lenguaje evoluciona con el tiempo. HTML es para aclarar que usamos HTML5-->
 <html>
   <style>
-    .titulo-principal { /*Para especificar pongo la clase empezando con un .*/
+    .titulo-principal { /*Para especificar pongo la clase empezando con un "." */
       color: Red;
     }
+    p {
+      font-family: lobster, monospace; /*tengo que agregar el nombre de la fuente que adjunte,
+       y poner una de repuesto, de las que vienen por defecto con los navegadores*/
+    }
+    .smaller-image {
+      width: 100px;
+    }
+    .borde {
+      border-color: green;
+      border-width: 10px;
+      border-style: solid;
+      border-radius: 10px; /*tambien se puede poner con porcentaje*/
+    }
+    .silver-background {
+     background-color: silver;
+    }
+    #cat-photo-form {
+      background-color: green !important; /*se usa important para que no haya override*/
+    }
+    
   </style>
 <!--head y body se usan para organizar mejor el contenido-->
 <head><!--En head por lo general se pone links, meta, tittle y styles-->
 <h2 class="Titulo-principal">CatPhotoApp</h2>
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 </head>
 <body><!--En body por lo general va todo lo que el usuario puede ver-->
 <main>
   <p>Click here to view more <a href="#">cat photos</a>.</p>
 
-  <a href="#"><img src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
-<div>
+  <a href="#"><img class="smaller-image borde" src="https://www.bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+<!--Se puede agregar varias clases a una imagen, separadas por un espacio-->
+  <div class="silver-background">
   <p>Things cats love:</p>
   <ul>
     <li>cat nip</li>
@@ -29,7 +51,7 @@ lenguaje evoluciona con el tiempo. HTML es para aclarar que usamos HTML5-->
     <li>other cats</li>
   </ol>
 </div><!--Se usa para separar elementos, puede facilitar el css-->
-  <form action="https://www.freecatphotoapp.com/submit-cat-photo">
+  <form id="cat-photo-form" style="background-color: hotpink;" action="https://www.freecatphotoapp.com/submit-cat-photo"> <!--ID es como class, se le suele poner a un solo elemento, tiene mas prioridad que class-->
     <!--Input viene a ser, en este caso el circulo para poder elegir la opcion que figura en 
     el label. Dependiendo en que posicion pongo cada uno, el input cambia de lugar-->
     <label for="indoor"><input id="indoor" value="indoor" type="radio" name="indoor-outdoor" checked> Indoor</label>
