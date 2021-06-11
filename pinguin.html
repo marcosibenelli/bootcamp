@@ -1,7 +1,9 @@
 <style>
-    .penguin {
-      --penguin-skin: gray; /*una variable sirve para modificar de una varias propiedades, se crea
+    :root {/*se utuliza el selector root para que se pueda heredar la variable en otros selectores*/
+        --penguin-skin: gray;  /*una variable sirve para modificar de una varias propiedades, se crea
       poniendo dos guines y creando un nombre, luego se le agrega la propiedad*/
+    }
+    .penguin {
       position: relative;
       margin: auto;
       display: block;
@@ -15,7 +17,8 @@
       left: 25%;
   
       /* Change code below this line */
-      background: var(--penguin-skin); /*en este caso agregamos la variable para el color de fondo*/
+      background: var(--penguin-skin, gray); /*en este caso agregamos la variable para el color de fondo,
+      tambien se le puede agregar un fallback, en caso que la variable falle (en este caso gray)*/
       /* Change code above this line */
   
       width: 50%;
