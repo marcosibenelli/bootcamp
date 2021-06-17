@@ -20,6 +20,13 @@
       margin: 10px 5px;
       padding: 4px;
     }
+    #navbar {
+    position: fixed; /*con la posicion fixed, fijamos el contenido sin importar si bajamos la pantalla*/
+    bottom: 0px; /*bottom, mueve el contenido al lado contrario que indico, lo mismo con right, left o top*/
+    right: 0px;
+    width: 100%;
+    background-color: #767676;
+  }
     .cardContent {
       padding: 10px;
     }
@@ -34,6 +41,12 @@
     <div class="cardContent">
       <div class="cardText">
         <h4><s>Google</s>Alphabet</h4>
+        <nav id="navbar">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </nav>
         <hr><!--hr se utiliza para crear una linea separadora-->
         <p><em> was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford 
             University</strong>.</em></p>
